@@ -5,7 +5,6 @@ import lombok.*;
 
 import java.util.Objects;
 
-@Getter
 @Entity
 @Builder
 @AllArgsConstructor
@@ -19,7 +18,7 @@ public class Car {
     private Long id;
 
     @Getter @Setter
-    @Column(name = "registration_nr", nullable = false)
+    @Column(name = "registration_nr", nullable = false, length = 8)
     private String registrationNr;
 
 

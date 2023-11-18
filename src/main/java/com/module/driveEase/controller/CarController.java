@@ -25,7 +25,6 @@ public class CarController {
 
     private  final CarRepository carRepository;
 
-    @CrossOrigin
     @GetMapping("/cars/{id}")
     public Car getCar(@PathVariable Long id) {
         return carService.getCar(id);
@@ -37,20 +36,17 @@ public class CarController {
         return carService.getAllCars();
     }
 
-
-    @CrossOrigin
     @PostMapping("/cars")
     public Car saveCar(@RequestBody CarDto carDto) {
         return carService.saveCar(carDto);
     }
 
-    @CrossOrigin
+
     @DeleteMapping("/cars/{id}")
     public void deleteCar(@PathVariable Long id) {
         carService.deleteCar(id);
     }
 
-    @CrossOrigin
     @PutMapping("/cars/{id}")
     public Car editCar(@PathVariable Long id, @RequestBody CarDto carDto) {
         return carService.editCar(id, carDto);
