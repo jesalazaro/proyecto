@@ -6,43 +6,43 @@ import lombok.*;
 import java.util.Objects;
 
 @Entity
-@Builder
+@Table(name = "vehiculos")
+@Getter
+@Setter
 @AllArgsConstructor
-@NoArgsConstructor
-@Table(name = "car")
 public class Car {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id", unique = true, nullable = false)
-    private Long id;
+    @Column
+    private int id_vehiculo;
 
-    @Getter @Setter
-    @Column(name = "registration_nr", nullable = false, length = 8)
-    private String registrationNr;
+    @Column
+    private String marca;
 
+    @Column
+    private String modelo;
 
-    @Getter @Setter
-    @Column(name = "brand", nullable = false)
-    private String brand;
+    @Column
+    private String numero_placa;
 
+    @Column
+    private Integer kilometraje;
 
-    @Getter @Setter
-    @Column(name = "model", nullable = false)
-    private String model;
+    @Column
+    private String tipo_vehiculo;
 
-    @Getter @Setter
-    @Column(name = "is_available", nullable = false)
-    private Boolean isAvailable;
+    @Column
+    private  Integer numero_cuenta;
 
+    @Column
+    private  Integer id_usuario;
 
-    @Getter @Setter
-    @Column(name = "type", nullable = false)
-    private String type;
-
-    @Getter @Setter
-    @Column(name = "km_traveled", nullable = false)
-    private  Integer kmTraveled;
+    @Column
+    private  double precio_dia;
 
 
+    public Car() {
+
+    }
 }

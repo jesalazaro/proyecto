@@ -1,20 +1,24 @@
 package com.module.driveEase.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
+import jakarta.persistence.Column;
+import lombok.*;
 
 @Data
 @AllArgsConstructor
 @Builder
+@Getter
+@Setter
 public class CarDto {
 
-    private String registrationNr;
-    private String brand;
-    private String model;
-    private Boolean isAvailable;
-    private String type;
-    private String vendor;
-    private Integer kmTraveled;
+    private int id_vehiculo;
+    private String marca;
+    private String modelo;
+    private String numero_placa;
+    private Integer kilometraje;
+    private String tipo_vehiculo;
+    private  Integer kmTraveled;
+    private  Integer numero_cuenta;
+    private  Integer id_usuario;
+    private  double precio_dia;
 
 }
